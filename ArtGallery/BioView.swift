@@ -12,13 +12,12 @@ struct BioView: View {
     
     var body: some View {
         ScrollView {
-            VStack(alignment: .leading) {
             ZStack {
                 Image(artist.image)
                     .resizable()
-                    .scaledToFill()
-                    .frame(height: 384)
-                    .frame(maxWidth: .infinity)
+                    .scaledToFit()
+//                    .frame(height: 384)
+//                    .frame(maxWidth: .infinity)
                     .clipped()
                   
                 HStack {
@@ -31,53 +30,61 @@ struct BioView: View {
                             .foregroundStyle(.gray)
                     }
                     
-                    .padding(.bottom, 40)
+                    
                     Spacer()
                 }
+                .padding(.bottom, 40)
+                .padding(.horizontal, 20)
+              
             }
-            .frame(height: 384)
+            VStack(alignment: .leading) {
+//            .frame(height: 384)
 
             Text("Biography")
-                .font(.title2.bold())
+                    .customFont(type: .inter, size: 16)
+               
             Text(artist.bio)
                 .frame(height: 100)
                 .frame(maxWidth: .infinity)
+                .customFont(type: .inter, size: 16)
+              
             Text("Works")
+                    .customFont(type: .inter, size: 18)
                 .font(.title2.bold())
                 ForEach(artist.works, id: \.title) { work in
                     NavigationLink {
                         WorkView(works: work)
                     } label: {
                         VStack(alignment: .leading) {
+                            // TO DO CORNERS
                             Image(work.image)
                                 .resizable()
+                                .clipShape(RoundedRectangle(cornerRadius: 11))
+                                
                             Text(work.title)
                                 .foregroundStyle(.black)
+                                .customFont(type: .inter, size: 16)
                         }
                     }
             }
         }
-        
-        
-            
-                
-            
+            .padding(.horizontal, 20)
         }
        
-        .ignoresSafeArea()
+        .ignoresSafeArea(edges: .top)
     }
 }
 
 #Preview {
     let mockWorks = [
-        Work(title: "Sunset", image: "sunset_image", info: "A beautiful sunset over the hills."),
-        Work(title: "Forest", image: "forest_image", info: "A mysterious forest path.")
+        Work(title: "Sunset", image: "Georgia1", info: "A beautiful sunset over the hills."),
+        Work(title: "Forest", image: "Georgia2", info: "A mysterious forest path.")
     ]
 
     let mockArtist = Artist(
         name: "Vincent van Gogh",
         bio: "Dutch post-impressionist painter known for expressive works.Dutch post-impressionist painter known for expressive works.Dutch post-impressionist painter known for expressive works.",
-        image: "0",
+        image: "2",
         works: mockWorks
     )
 
