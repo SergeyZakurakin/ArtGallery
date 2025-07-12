@@ -13,8 +13,6 @@ struct WorkView: View {
     
     
     var body: some View {
-        
-       
             VStack() {
                 Rectangle()
                     .foregroundColor(.clear)
@@ -30,8 +28,12 @@ struct WorkView: View {
                 
                 VStack(alignment: .leading) {
                     Text(works.title)
+                        .font(.title)
                     Text(works.info)
+                        
                 }
+                .frame(maxWidth: .infinity)
+                .padding(.horizontal, 20)
                 Spacer()
                 
                 Button {

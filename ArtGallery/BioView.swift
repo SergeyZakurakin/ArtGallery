@@ -27,7 +27,7 @@ struct BioView: View {
                             .foregroundStyle(.white)
                             .font(.headline)
                         Text("Author")
-                            .foregroundStyle(.gray)
+                            .foregroundStyle(.white).opacity(0.7)
                     }
                     
                     
@@ -37,20 +37,19 @@ struct BioView: View {
                 .padding(.horizontal, 20)
               
             }
-            VStack(alignment: .leading) {
+            VStack(alignment: .leading, spacing: 20) {
 //            .frame(height: 384)
 
             Text("Biography")
-                    .customFont(type: .inter, size: 16)
+                    .font(.title)
                
             Text(artist.bio)
-                .frame(height: 100)
+                
                 .frame(maxWidth: .infinity)
-                .customFont(type: .inter, size: 16)
+                
               
             Text("Works")
-                    .customFont(type: .inter, size: 18)
-                .font(.title2.bold())
+                    .font(.title)
                 ForEach(artist.works, id: \.title) { work in
                     NavigationLink {
                         WorkView(works: work)

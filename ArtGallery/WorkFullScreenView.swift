@@ -29,7 +29,7 @@ struct WorkFullScreenView: View {
 }
 
 #Preview {
-    let work: Work = .init(title: "", image: "", info: ")")
+    let work: Work = .init(title: "", image: "0", info: ")")
     
     WorkFullScreenView(image: work)
 }
