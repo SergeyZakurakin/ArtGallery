@@ -6,17 +6,28 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		DC7506872E20B6890082A60C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC75067F2E20B6890082A60C /* Preview Assets.xcassets */; };
+		DC7506882E20B6890082A60C /* Assets.xcassets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC7506832E20B6890082A60C /* Assets.xcassets.xcassets */; };
+		DC7506892E20B6890082A60C /* ArtGalleryApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7506812E20B6890082A60C /* ArtGalleryApp.swift */; };
+		DC75068A2E20B6890082A60C /* ArtModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7506822E20B6890082A60C /* ArtModel.swift */; };
+		DC75068B2E20B6890082A60C /* BioView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7506842E20B6890082A60C /* BioView.swift */; };
+		DC75068C2E20B6890082A60C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7506852E20B6890082A60C /* ContentView.swift */; };
+		DC75068E2E22833E0082A60C /* WorkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC75068D2E22833E0082A60C /* WorkView.swift */; };
+		DC7506902E22EDC40082A60C /* WorkFullScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC75068F2E22EDC40082A60C /* WorkFullScreenView.swift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		DC7506032E20A1F40082A60C /* ArtGallery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ArtGallery.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DC75067F2E20B6890082A60C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		DC7506812E20B6890082A60C /* ArtGalleryApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtGalleryApp.swift; sourceTree = "<group>"; };
+		DC7506822E20B6890082A60C /* ArtModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtModel.swift; sourceTree = "<group>"; };
+		DC7506832E20B6890082A60C /* Assets.xcassets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets.xcassets; sourceTree = "<group>"; };
+		DC7506842E20B6890082A60C /* BioView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BioView.swift; sourceTree = "<group>"; };
+		DC7506852E20B6890082A60C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		DC75068D2E22833E0082A60C /* WorkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkView.swift; sourceTree = "<group>"; };
+		DC75068F2E22EDC40082A60C /* WorkFullScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkFullScreenView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
-
-/* Begin PBXFileSystemSynchronizedRootGroup section */
-		DC7506052E20A1F40082A60C /* ArtGallery */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = ArtGallery;
-			sourceTree = "<group>";
-		};
-/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		DC7506002E20A1F40082A60C /* Frameworks */ = {
@@ -32,7 +43,7 @@
 		DC7505FA2E20A1F40082A60C = {
 			isa = PBXGroup;
 			children = (
-				DC7506052E20A1F40082A60C /* ArtGallery */,
+				DC7506862E20B6890082A60C /* ArtGallery */,
 				DC7506042E20A1F40082A60C /* Products */,
 			);
 			sourceTree = "<group>";
@@ -43,6 +54,29 @@
 				DC7506032E20A1F40082A60C /* ArtGallery.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		DC7506802E20B6890082A60C /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				DC75067F2E20B6890082A60C /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		DC7506862E20B6890082A60C /* ArtGallery */ = {
+			isa = PBXGroup;
+			children = (
+				DC7506802E20B6890082A60C /* Preview Content */,
+				DC7506812E20B6890082A60C /* ArtGalleryApp.swift */,
+				DC7506822E20B6890082A60C /* ArtModel.swift */,
+				DC7506832E20B6890082A60C /* Assets.xcassets.xcassets */,
+				DC7506852E20B6890082A60C /* ContentView.swift */,
+				DC7506842E20B6890082A60C /* BioView.swift */,
+				DC75068D2E22833E0082A60C /* WorkView.swift */,
+				DC75068F2E22EDC40082A60C /* WorkFullScreenView.swift */,
+			);
+			path = ArtGallery;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -59,9 +93,6 @@
 			buildRules = (
 			);
 			dependencies = (
-			);
-			fileSystemSynchronizedGroups = (
-				DC7506052E20A1F40082A60C /* ArtGallery */,
 			);
 			name = ArtGallery;
 			packageProductDependencies = (
@@ -109,6 +140,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC7506872E20B6890082A60C /* Preview Assets.xcassets in Resources */,
+				DC7506882E20B6890082A60C /* Assets.xcassets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -119,6 +152,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC7506892E20B6890082A60C /* ArtGalleryApp.swift in Sources */,
+				DC75068A2E20B6890082A60C /* ArtModel.swift in Sources */,
+				DC7506902E22EDC40082A60C /* WorkFullScreenView.swift in Sources */,
+				DC75068B2E20B6890082A60C /* BioView.swift in Sources */,
+				DC75068E2E22833E0082A60C /* WorkView.swift in Sources */,
+				DC75068C2E20B6890082A60C /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,8 +297,9 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -267,9 +307,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.zakurakin.ArtGallery;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -287,8 +331,9 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -296,9 +341,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.zakurakin.ArtGallery;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
