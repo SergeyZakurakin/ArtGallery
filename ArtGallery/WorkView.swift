@@ -15,7 +15,7 @@ struct WorkView: View {
     var body: some View {
         
        
-            VStack(alignment: .leading) {
+            VStack() {
                 Rectangle()
                     .foregroundColor(.clear)
                     .frame(height: 287)
@@ -37,13 +37,15 @@ struct WorkView: View {
                 Button {
                     isShowingFullScreen = true
                 } label: {
-                    //                HStack(alignment: .center, spacing: 10) { ... }
-                    Rectangle()
-                        .padding(.horizontal, 31)
-                        .padding(.vertical, 11)
-                        .frame(width: 335, height: 46, alignment: .center)
-                        .background(.black)
-                        .cornerRadius(10)
+                    Text("Full screen")
+                        .frame(width: 200, height: 40)
+                        .foregroundStyle(.white)
+                        .background(
+                            RoundedRectangle(cornerRadius: 15)
+                                .fill(Color.black)
+                        )
+                        .padding()
+                    
                 }
                 
             }
@@ -57,5 +59,5 @@ struct WorkView: View {
 }
 
 #Preview {
-    WorkView(works: Work(title: "777", image: "", info: "77"))
+    WorkView(works: Work(title: "fsdafsdf", image: "1", info: "fasdfsdfsfsfdsafdfsddfsdfsadfasfdsfdsfsfdsfd"))
 }
