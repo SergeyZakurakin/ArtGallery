@@ -8,23 +8,41 @@
 import SwiftUI
 
 struct WorkFullScreenView: View {
+    @Environment(\.dismiss) private var dismiss
+    
         let image: Work
     
     var body: some View {
-        GeometryReader { geometry in
-            Image(image.image)
+        VStack {
+            GeometryReader { geometry in
+                Image(image.image)
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .frame(
+                        width: geometry.size.height,
+                        height: geometry.size.width
+                    )
+                    .rotationEffect(.degrees(-90))
+                    .offset(x: (geometry.size.width - geometry.size.height) / 2,
+                            y: (geometry.size.height - geometry.size.width) / 2)
+            }
+            .ignoresSafeArea()
+            
+            HStack {
+                Spacer()
+                Button {
+                    dismiss()
+                } label: {
+                    Image(.addCircle)
                         .resizable()
-                        .aspectRatio(contentMode: .fit)
-                        .frame(
-                            width: geometry.size.height,
-                            height: geometry.size.width
-                        )
-                        .rotationEffect(.degrees(-90))
-                        .offset(x: (geometry.size.width - geometry.size.height) / 2,
-                                y: (geometry.size.height - geometry.size.width) / 2)
+                        .frame(width: 50, height: 50)
+                        .rotationEffect(.degrees(45))
                 }
-                .ignoresSafeArea()
-     
+            }
+            .padding(40)
+
+        }
+        .navigationBarBackButtonHidden(true)
     }
 }
 

@@ -29,8 +29,7 @@ struct BioView: View {
                         Text("Author")
                             .foregroundStyle(.white).opacity(0.7)
                     }
-                    
-                    
+                     
                     Spacer()
                 }
                 .padding(.bottom, 40)
