@@ -10,6 +10,7 @@ import SwiftUI
 struct ContentView: View {
     @StateObject private var viewModel = DataViewModel()
     @State private var search = ""
+    @State private var isSheetActive: Bool = false
     
     var filteredArtists: [Artist] {
         guard !search.isEmpty else {
@@ -59,7 +60,7 @@ struct ContentView: View {
                 
                 ToolbarItem(placement: .topBarTrailing) {
                     Button(action: {
-                        // действие по кнопке
+                        isSheetActive = true
                         print("Плюс нажали")
                     }) {
                         Image(.addCircle)
@@ -67,12 +68,13 @@ struct ContentView: View {
                     }
                 }
             }
-            
         }
         .task {
             await viewModel.fetchData()
         }
-     
+        .sheet(isPresented: $isSheetActive) {
+            Text("New Artist")
+        }
     }
 }
 
