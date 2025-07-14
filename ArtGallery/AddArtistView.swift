@@ -52,6 +52,11 @@ struct AddArtistView: View {
             TextField( "Enter name", text: $info)
                 .textFieldStyle(.roundedBorder)
             
+            Button("Save") {
+                
+            }
+        
+            
         }
         .onChange(of: artistPhoto) { _, _ in
             Task {
